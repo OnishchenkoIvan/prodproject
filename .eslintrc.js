@@ -5,7 +5,6 @@ module.exports = {
     jest: true,
   },
   extends: ["plugin:react/recommended", "airbnb", "plugin:i18next/recommended"],
-  overrides: [],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
@@ -22,7 +21,7 @@ module.exports = {
     indent: [2, 2],
     "react/jsx-filename-extension": [
       2,
-      { extensions: [".js", ".jsx", ".tsx"] },
+      { extensions: [".js", ".jsx", ".tsx", ".ts"] },
     ],
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
@@ -36,10 +35,21 @@ module.exports = {
     "import/no-extraneous-dependencies": "off",
     "no-underscore-dangle": "off",
     "comma-dangle": "off",
-    "i18next/no-literal-string": ["warn", { markupOnly: true }],
-    "max-len": ["error", { code: 100, ignoreComments: true }],
+    "i18next/no-literal-string": [
+      "warn",
+      { markupOnly: true, ignoreAttribute: ["data-testid", "to"] },
+    ],
+    "max-len": ["error", { code: 105, ignoreComments: true }],
   },
   globals: {
     __IS_DEV__: true,
   },
+  overrides: [
+    {
+      files: ["**/src/**/*.test.{ts,tsx}"],
+      rules: {
+        "i18next/no-literal-string": "off",
+      },
+    },
+  ],
 };
