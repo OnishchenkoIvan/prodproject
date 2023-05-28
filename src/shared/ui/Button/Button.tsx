@@ -4,11 +4,14 @@ import { classNames } from "../../lib/classNames/classNames";
 
 export enum ThemeButton {
   CLEAR = "clear",
+  OUTLINE = "outline",
 }
+
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   theme?: ThemeButton;
 }
+
 export const Button: FC<ButtonProps> = (props) => {
   // eslint-disable-next-line object-curly-newline
   const { className, children, theme, ...otherProps } = props;

@@ -1,3 +1,3 @@
-import { Navbar } from "widgets/Navbar/ui/Navbar";
+import { PageError } from "widgets/Navbar/ui/Navbar";
 
-export { Navbar };
+export { PageError };
