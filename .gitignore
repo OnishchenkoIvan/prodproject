@@ -6,6 +6,7 @@
 .pnp.js
 .idea
 /.idea
+/storybook-static
 
 # testing
 /coverage
