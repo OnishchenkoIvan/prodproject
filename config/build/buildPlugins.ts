@@ -1,8 +1,9 @@
-import * as HtmlWebpackPlugin from "html-webpack-plugin";
 import * as webpack from "webpack";
-import * as MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 import { BuildOptions } from "./types/config";
+
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
   const plugins = [
