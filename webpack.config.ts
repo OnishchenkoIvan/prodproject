@@ -22,13 +22,6 @@ export default (env: BuildEnv) => {
     isDev,
     port: PORT,
   });
-  //
-  // config.resolve = {
-  //   ...config.resolve,
-  //   fallback: {
-  //     fs: false,
-  //   },
-  // };
 
   return config;
 };
