@@ -7,7 +7,8 @@
 .idea
 /.idea
 /storybook-static
-
+.loki/report.html
+.loki/report.json
 # testing
 /coverage
 

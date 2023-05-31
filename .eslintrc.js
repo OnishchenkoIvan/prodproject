@@ -49,6 +49,7 @@ module.exports = {
     "no-underscore-dangle": "off",
     "comma-dangle": "off",
     "implicit-arrow-linebreak": ["off", "beside"],
+    "wrap-iife": ["error", "inside"],
     "i18next/no-literal-string": [
       "warn",
       {
